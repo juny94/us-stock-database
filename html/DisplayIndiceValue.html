@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+                <link rel="icon" href="img/favicon.png" type="image/png">
+                    <title>US STOCK PROJECT</title>
+                    <!-- Bootstrap CSS -->
+                    <link rel="stylesheet" href="css/bootstrap.css">
+                        <link rel="stylesheet" href="vendors/linericon/style.css">
+                            <link rel="stylesheet" href="css/font-awesome.min.css">
+                                <link rel="stylesheet" href="vendors/owl-carousel/owl.carousel.min.css">
+                                    <link rel="stylesheet" href="vendors/lightbox/simpleLightbox.css">
+                                        <link rel="stylesheet" href="vendors/nice-select/css/nice-select.css">
+                                            <link rel="stylesheet" href="vendors/animate-css/animate.css">
+                                                <!-- main css -->
+                                                <link rel="stylesheet" href="css/style.css">
+                                                    <link rel="stylesheet" href="css/responsive.css">
+                                                        </head>
+    <body>
+        
+        <!--================Header Menu Area =================-->
+        <header class="header_area">
+            <div class="main_menu">
+                <nav class="navbar navbar-expand-lg navbar-light">
+                    <div class="container">
+                        <!-- Brand and toggle get grouped for better mobile display -->
+                        <a class="navbar-brand logo_h" href="http://ugrad.cs.jhu.edu/~nju1/HomePage.html"><h1 style="color: #5e9ca0;">US Stock Database</h1></a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <!-- Collect the nav links, forms, and other content for toggling -->
+                        <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
+                            <ul class="nav navbar-nav menu_nav justify-content-center">
+                                <li class="nav-item"><a class="nav-link" href="http://ugrad.cs.jhu.edu/~nju1/HomePage.html">Home</a></li>
+                                <li class="nav-item"><a class="nav-link" href="http://ugrad.cs.jhu.edu/~nju1/Introduction.html">Introduction</a></li>
+                                <li class="nav-item"><a class="nav-link" href="http://ugrad.cs.jhu.edu/~nju1/Specialization.html">Specialization</a></li>
+                                <li class="nav-item"><a class="nav-link" href="http://ugrad.cs.jhu.edu/~nju1/Future.html">Future Work</a></li>
+                                <li class="nav-item"><a class="nav-link" href="http://ugrad.cs.jhu.edu/~nju1/contact.html">Contact</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </header>
+        <!--================Header Menu Area =================-->
+        
+        
+        <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+            <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.37/css/bootstrap-datetimepicker.min.css">
+                <style type="text/css">
+                    .container {
+                        margin-top: 40px;
+                    }
+                .btn-primary {
+                    width: 100%;
+                }
+                </style>
+                
+                <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+                <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/2.14.1/moment.min.js"></script>
+                <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+                <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.37/js/bootstrap-datetimepicker.min.js"></script>
+                
+                <script type='text/javascript'>
+                    $( document ).ready(function() {
+                                        $('#datetimepicker1').datetimepicker();
+                                        });
+                    </script>
+                
+                <script type='text/javascript'>
+                    $( document ).ready(function() {
+                                        $('#datetimepicker2').datetimepicker();
+                                        });
+                    </script>
+                
+                </head>
+                <body>
+                    <form action="DisplayIndiceValue.php" method="post">
+                        <div class="container">
+                            <div class="panel panel-primary">
+                                <div class="panel-heading">Displaying Indice Value</div>
+                                <div class="panel-body">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label class="control-label">Indice</label>
+                                                <select name="SymbolID">
+                                                    <option value ="">---Please Select---</option>
+                                                    <option value ="The Global Dow">The Global Dow</option>
+                                                    <option value ="Dow Jones Industrial Average">Dow Jones Industrial Average</option>
+                                                    <option value ="S&P 500 Index">S&amp;P 500 Index</option>
+                                                    <option value ="Russell 2000 Index">Russell 2000 Index</option>
+                                                    <option value ="Composite Index">Composite Index</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class='col-md-6'>
+                                            <div class="form-group">
+                                                <label class="control-label">Start Date</label>
+                                                <div class='input-group date' id='datetimepicker1'>
+                                                    <input type='text' class="form-control" name="Beginning"/>
+                                                    <span class="input-group-addon">
+                                                        <span class="glyphicon glyphicon-calendar"></span>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class='col-md-6'>
+                                            <div class="form-group">
+                                                <label class="control-label">End Date</label>
+                                                <div class='input-group date' id='datetimepicker2'>
+                                                    <input type='text' class="form-control" name="Ending"/>
+                                                    <span class="input-group-addon">
+                                                        <span class="glyphicon glyphicon-calendar"></span>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <input type="submit" class="btn btn-primary" value="Submit">
+                                        </div>
+                            </div>
+                        </div>
+                        
+                        </body>
+                
+                
+                <!--================Footer Area =================-->
+                <footer class="footer_area section_gap">
+                    <div class="container">
+                        <div class="row footer_inner">
+                            <div class="col-lg-5 col-sm-6">
+                                <aside class="f_widget ab_widget">
+                                    <div class="f_title">
+                                        <h3>About Us</h3>
+                                        
+                                    </div>
+                                    <p><span style="font-weight: 400;">Ning Ju (615) nju1@jhu.edu</span><br>
+                                    <span style="font-weight: 400;">Hongqiao Mu (615) hmu3@jhu.edu</span><br>
+                                    <span style="font-weight: 400;">Jiawen Bai (615) jiawen.bai@jhu.edu</span></p>
+                                    <p>Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved</p>
+                                </aside>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+                <!--================End Footer Area =================-->
+                
+                
+                
+                
+                <!-- Optional JavaScript -->
+                <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+                <script src="js/jquery-3.2.1.min.js"></script>
+                <script src="js/popper.js"></script>
+                <script src="js/bootstrap.min.js"></script>
+                <script src="js/stellar.js"></script>
+                <script src="vendors/lightbox/simpleLightbox.min.js"></script>
+                <script src="vendors/nice-select/js/jquery.nice-select.min.js"></script>
+                <script src="vendors/isotope/imagesloaded.pkgd.min.js"></script>
+                <script src="vendors/isotope/isotope-min.js"></script>
+                <script src="vendors/owl-carousel/owl.carousel.min.js"></script>
+                <script src="js/jquery.ajaxchimp.min.js"></script>
+                <script src="js/mail-script.js"></script>
+                <script src="vendors/counter-up/jquery.waypoints.min.js"></script>
+                <script src="vendors/counter-up/jquery.counterup.min.js"></script>
+                <script src="js/theme.js"></script>
+                </body>
+</html>
